@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+}
+
+button {
+    color: white;
+}
+
+button#ja {
+    background-color: green;
+}
+
+button#nein {
+    background-color: red;
+}
