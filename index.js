@@ -5,12 +5,12 @@ window.onload = function() {
     var nachrichtId = url.searchParams.get("nachricht");
 
     document.getElementById("ja").onclick = function () {
-        sendAntwort(nachrichtId, "Ja, ich komme und helfe!")
+        sendAntwort(nachrichtId, "JA")
         location.href = "ja.html";
     };
 
     document.getElementById("nein").onclick = function () {
-        sendAntwort(nachrichtId, "Nein, ich bin leider gerade verhindert und kann nicht helfen!")
+        sendAntwort(nachrichtId, "NEIN")
         location.href = "nein.html";
     };
 }
