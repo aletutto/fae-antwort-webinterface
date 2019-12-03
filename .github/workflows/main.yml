@@ -12,5 +12,7 @@ jobs:
         FTP_SERVER:  ${{ secrets.ip }}
         FTP_USERNAME: ${{ secrets.username }}
         FTP_PASSWORD: ${{ secrets.pw }}
+        METHOD: sftp
+        port:  22
         REMOTE_DIR: ${{ secrets.dir }}
         ARGS: --delete
