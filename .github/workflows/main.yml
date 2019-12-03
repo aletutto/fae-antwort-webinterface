@@ -1,7 +1,16 @@
-- name: FTP Deploy
-  uses: SamKirkland/FTP-Deploy-Action@2.0.0
-  with:
-    ftp_server: ${{ secrets.ip }}
-    ftp_username: ${{ secrets.username }}
-    ftp_password: ${{ secrets.pw }}
-    remote_dir: ${{ secrets.dir }}
+on: push
+name: Publish Website
+jobs:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      env:
+        FTP_SERVER:  ${{ secrets.ip }}
+        FTP_USERNAME: ${{ secrets.username }}
+        FTP_PASSWORD: ${{ secrets.pw }}
+        REMOTE_DIR: ${{ secrets.dir }}
+        ARGS: --delete
