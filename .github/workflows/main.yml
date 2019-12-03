@@ -2,6 +2,6 @@
   uses: SamKirkland/FTP-Deploy-Action@2.0.0
   with:
     ftp_server: ${{ secrets.ip }}
-    ftp_username: ${{ secrets.GITHUB_TOKEN }}
+    ftp_username: ${{ secrets.username }}
     ftp_password: ${{ secrets.pw }}
     remote_dir: ${{ secrets.dir }}
